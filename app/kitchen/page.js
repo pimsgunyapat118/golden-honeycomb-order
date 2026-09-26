@@ -1,7 +1,5 @@
 'use client';
-
-import { useEffect, useState } from 'react';
-import { supabase } from '../../lib/supabaseClient';
+import { supabase } from '@/lib/supabaseClient';
 
 // หมายเหตุ: หน้านี้ใช้ Supabase Realtime — ต้องเปิด Realtime replication
 // ให้ตาราง "orders" ไว้ที่ Supabase Dashboard > Database > Replication ก่อนใช้งานจริง
