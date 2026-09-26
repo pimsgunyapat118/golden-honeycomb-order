@@ -1,7 +1,6 @@
 'use client';
-
-import { use, useEffect, useState } from 'react';
-import { supabase } from '../../../lib/supabaseClient';
+import { use } from 'react';
+import { supabase } from '@/lib/supabaseClient';
 
 const COLORS = {
   gold: '#C9971E',
