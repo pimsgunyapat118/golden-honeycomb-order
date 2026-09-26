@@ -7,7 +7,6 @@ export default function KitchenPage() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    // 1. โหลดออเดอร์เริ่มต้น
     async function fetchOrders() {
       const { data } = await supabase
         .from('orders')
@@ -20,7 +19,6 @@ export default function KitchenPage() {
 
     fetchOrders();
 
-    // 2. เปิดรับข้อมูล Realtime
     const channel = supabase
       .channel('kitchen-orders')
       .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, () => {
